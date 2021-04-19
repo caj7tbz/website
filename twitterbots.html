@@ -105,10 +105,10 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_connectedscatter.csv", function(data) {
+d3.csv("https://cannon.fish/stats.csv", function(data) {
 
     // List of groups (here I have one group per column)
-    var allGroup = ["valueA", "valueB", "valueC"]
+    var allGroup = ["Apple", "Google", "Tesla", "Microsoft"]
 
     // add the options to the button
     d3.select("#selectButton")
@@ -134,7 +134,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
 
     // Add Y axis
     var y = d3.scaleLinear()
-      .domain( [0,20])
+      .domain( [0,1])
       .range([ height, 0 ]);
     svg.append("g")
       .call(d3.axisLeft(y));
@@ -148,7 +148,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
           .x(function(d) { return x(+d.time) })
           .y(function(d) { return y(+d.valueA) })
         )
-        .attr("stroke", function(d){ return myColor("valueA") })
+        .attr("stroke", function(d){ return myColor("Apple") })
         .style("stroke-width", 4)
         .style("fill", "none")
 
