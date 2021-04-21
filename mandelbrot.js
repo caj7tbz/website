@@ -1,3 +1,5 @@
+
+
 // Tree configuration
 var branches = [];
 var seed = {i: 0, x: 420, y: 550, a: 0, l: 100, d:0}; // a = angle, l = length, d = depth
