@@ -67,6 +67,11 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
 	border: none;
 }
+@media screen and (max-width: 500px) {
+    svg {
+        width:50%;
+    }
+}
 
 </style>
 
@@ -94,6 +99,8 @@ input[type="color"]::-webkit-color-swatch {
             
             <input type="color" id="favcolor2" name="favcolor2" value="#008000" oninput="update()"
                    data-toggle="tooltip" title="changes color of the branches">
+                <br/>
+                <button id="random" onclick="fullRandom()" data-toggle="tooltip" title="randomizes color and randomness">randomize</button>
                 <br/>
             <input type="range" min="0" max="1" value="0.7" step="0.1" class="slider" id="randomRange"
                    data-toggle="tooltip" title="changes the randomness (must regenerate)">

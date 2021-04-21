@@ -44,6 +44,19 @@ function branch(b) {
 	};
 	branch(newB);
 }
+function randomColor() { return Math.floor(Math.random()*16777215).toString(16); }
+
+function fullRandom() {
+    
+    
+  
+    
+    console.log(randomColor);
+    document.getElementById("favcolor").value = "#" + randomColor(Math.random(maxDepth))
+    document.getElementById("favcolor2").value = "#" + randomColor(Math.random(maxDepth))
+    document.getElementById("randomRange").value = (Math.floor(Math.random() * maxDepth) + 1) / 10;
+    regenerate();                                           
+}
 
 function regenerate(initialise) {
     
@@ -52,6 +65,7 @@ function regenerate(initialise) {
 	branch(seed);
 	initialise ? create() : update();
 }
+
 
 function endPt(b) {
 	// Return endpoint of branch
@@ -107,7 +121,7 @@ function update() {
 		.selectAll('line')
 		.data(branches)
 		.transition()
-        .duration(500)
+        .duration(1000)
 		.attr('x1', x1)
 		.attr('y1', y1)
 		.attr('x2', x2)
