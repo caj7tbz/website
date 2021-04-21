@@ -48,7 +48,14 @@ function branch(b) {
 }
 
 //this function does not work correctly, i believe this is causing lag on the random generator
-function randomColor() { return Math.floor(Math.random()*16777215).toString(16); }
+function randomColor() {
+    const hex = '0123456789ABCDEF';
+    let output = '';
+    for (let i = 0; i < 6; ++i) {
+        output += hex.charAt(Math.floor(Math.random() * hex.length));
+    }
+    return output;
+}
 
 function fullRandom() {
     //there is probably a less hacky way to do this, but I am too lazy to find it
