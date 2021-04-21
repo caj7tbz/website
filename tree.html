@@ -53,6 +53,9 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+    #godown h3 {
+        padding: 50px 0;
+    }
     
 input[type="color"] {
 	-webkit-appearance: none;
@@ -104,6 +107,31 @@ input[type="color"]::-webkit-color-swatch {
                 <br/>
             <input type="range" min="0" max="1" value="0.7" step="0.1" class="slider" id="randomRange"
                    data-toggle="tooltip" title="changes the randomness (must regenerate)">
+                
+            <br />
+                
+            <h3 id="godown">about this project</h3>
+            
+                <p>i made this project as part of my coursework for Forge's <a href="https://envision.joinforge.co/">Envision course</a>, in which i learned how to make data visualizations in d3.</p>
+                <p>i had originally planned on making a more traditional data visualization, but didn't have enough time to fully explore my data set. <a href="/retail.html">sneak peek here!</a> </p>
+                <br/>
+                <h5>the process</h5>
+                <p>the basic idea behind this tree is that i start with an initial branch which spawns two branches off its end.</p>
+                <p>from there, i generate random angles to orient them at, then for each branch repeat the process.</p>
+                <p>i then use d3 to transform my generated coordinates into line segments, as well as color and display them.</p>
+                <br/>
+                <h5>a note on computational complexity</h5>
+                <p>you may notice a small amount of lag when generating trees, especially when generating random trees.</p>
+                <p>generating fractal trees like this is not efficient, with a time complexity of O(2<sup>n</sup>).</p>
+                <p>i hard coded the depth for all generated fractal trees to be 10, to avoid any browser lockups.</p>
+                <br/>
+                <h5>future improvements</h5>
+                <p>while i am a fan of this page's current minimalist design, i know that it is not user friendly.</p>
+                <p>with more time i would like to create a better UI, but this project is already the result of lack of time.</p>
+                <p>i would also like to take a look at generating different fractal shapes.</p>
+                <br/>
+                <h3>thank you so much for taking the time to read this!</h3>
+                
           </div>
             
         </div>
