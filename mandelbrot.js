@@ -33,7 +33,7 @@ function branch(b) {
 	};
 	branch(newB);
 
-	// Right branch
+	// Right branch. There is some fun things you can make by changing the operator of the angle, but ill let you find them :P
 	daR = ar * Math.random() - ar * 0.5;
 	newB = {
 		i: branches.length,
@@ -54,6 +54,7 @@ function randomColor() {
     for (let i = 0; i < 6; ++i) {
         output += hex.charAt(Math.floor(Math.random() * hex.length));
     }
+    //i am a bit proud of just how hacky it is though
     return output;
 }
 
